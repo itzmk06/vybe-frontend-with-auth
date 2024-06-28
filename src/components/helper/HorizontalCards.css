@@ -1,0 +1,33 @@
+.marquee-container {
+    position: relative;
+  }
+  
+  .marquee {
+    display: flex;
+    width: calc(2 * 100%);
+    animation: marquee 60s linear infinite;
+  }
+  
+  .card {
+    margin-right: 16px; 
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(calc(-50%));
+    }
+  }
+
+  .dont-move{
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+      10% {
+        transform: translateX(calc(-50%));
+      }
+  }
+}
